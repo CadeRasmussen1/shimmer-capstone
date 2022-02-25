@@ -79,7 +79,6 @@ class Register extends Component {
                 </p>
               </form>
             </div>
-            <Footer />
           </div>
         );
       }
