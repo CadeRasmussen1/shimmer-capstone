@@ -1,8 +1,8 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import { Landing } from './components/landing/landing.js';
-import { Signin } from './components/signin/Signin.js';
-import { Register } from './components/register/register.js';
+import Landing from './components/landing/landing';
+import Signin from './components/signin/Signin';
+import Register from './components/register/register';
 
 
 export default(

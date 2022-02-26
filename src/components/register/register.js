@@ -38,7 +38,7 @@ class Register extends Component {
         const { username, password } = this.state;
         return (
           <div className="register-container">
-            <Nav />
+            
             <div className="register-content">
               <p className="register-page-title-content">Lets get to sharing!</p>
               <form className="form-content" onSubmit={this.register}>
