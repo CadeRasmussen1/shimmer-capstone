@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './register.css';
 import axios from 'axios';
-import { loginUser } from '../../default/default';
+import { login_User }  from '../../default/default';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+
 export default class Register extends Component {
     constructor() {
         super();
@@ -27,7 +27,7 @@ export default class Register extends Component {
         axios
             .post("/auth/register", {username, password})
             .then((res) => {
-                this.props.loginUser(res.data);
+                login_User(res.data);
                 this.props.history.push("/Signin");
             })
             .catch((error) => {

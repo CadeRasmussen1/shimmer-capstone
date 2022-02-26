@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./Signin.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+
 
 export default class Signin extends Component {
     constructor() {

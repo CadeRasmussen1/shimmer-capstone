@@ -1,4 +1,3 @@
-import axios from 'axios';
 
 const initialState = {
     id: null,
@@ -9,7 +8,7 @@ const initialState = {
 const login_user = 'login_user';
 const logout_user = 'logout_user';
 
-export function loginUser({userId, username}) {
+export function login_User({userId, username}) {
     return {
         type: login_user,
         payload: {
@@ -19,9 +18,18 @@ export function loginUser({userId, username}) {
     }
 }
 
-export function logoutUser() {
+export function logout_User() {
     return {
         type: logout_user,
         payload: initialState
+    }
+}
+export default function(state = initialState, action) {
+    switch(action.type) {
+        case login_User:
+            return { ...state, ...action.payload, isLoggedIn: true}
+        case logout_user:
+            return {...state, ...action.payload}
+        
     }
 }
