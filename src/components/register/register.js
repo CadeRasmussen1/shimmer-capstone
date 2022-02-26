@@ -3,7 +3,7 @@ import './register.css';
 import axios from 'axios';
 import { loginUser } from '../../default/default';
 
-class Register extends Component {
+export default class Register extends Component {
     constructor() {
         super();
 
