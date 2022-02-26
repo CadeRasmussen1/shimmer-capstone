@@ -21,7 +21,7 @@ export function loginUser({userId, username}) {
 
 export function logoutUser() {
     return {
-        type: login_user,
+        type: logout_user,
         payload: initialState
     }
 }
