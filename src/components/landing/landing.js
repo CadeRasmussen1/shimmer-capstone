@@ -2,7 +2,7 @@ import React from "react";
 import "./landing.css"
 
 
-export function Landing() {
+export function landing() {
     return (
         <div className="landing-container">
             <div className="landing-content">
