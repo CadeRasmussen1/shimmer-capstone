@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import "./Signin.css";
 import axios from "axios";
-
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 export default class Signin extends Component {
     constructor() {
@@ -36,7 +37,7 @@ export default class Signin extends Component {
         const { username, password } = this.state;
         return (
           <div className="signIn-container">
-            <Nav />
+            
             <div className="signIn-content">
               <p className="signIn-page-title-content">Welcome Back!</p>
               <form className="form-content" onSubmit={this.login}>

@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import './register.css';
 import axios from 'axios';
 import { loginUser } from '../../default/default';
-
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 export default class Register extends Component {
     constructor() {
         super();
