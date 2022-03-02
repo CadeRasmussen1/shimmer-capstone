@@ -1,19 +1,16 @@
-
-
 .landing-container {
-    background-color: #f9f9f9;
-    height: 80vh;
-    width: 100vw;
-    border: 2px solid lightgrey;
+    background-image: url("https://wallpapercave.com/wp/3wPVPxQ.jpg");
+    display: flex;
+    height: 100vh;
 }
 
 .landing-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    justify-content: top;
+    margin-left: 20px;
+    margin-top: 15px;
     
 }
 
@@ -21,6 +18,9 @@
     color: #f68ECE;
     font-family: 'Open Sans', sans-serif;
     font-size: 45px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .paragraph-content {
@@ -32,33 +32,28 @@
     width: 42em;
 }
 
-.line-bar {
-    width: 25%;
-    margin:30px;
-    background-color: #eee;
-    border: 0 none;
-    color: #eee;
-    height: 3px;
-}
-
 .sign-in-btn {
     background-color: #00c8f8;
     border: 2px solid #00c8f8;
     color: white;
-    padding: 13px;
+    padding: 10px;
     width: 160px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .sign-in-btn:hover {
-    border: 2px solid #f68ECE;
+    border: 2px solid #000000;
     opacity: 0.8;
 }
 
 .register-btn-landing {
     color: #00c8f8;
     text-decoration: none;
+}
+
+.Dont-have {
+    color: white;
 }
 
 @media(max-width: 690px) {

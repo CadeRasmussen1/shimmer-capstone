@@ -7,8 +7,8 @@ import Register from './components/register/register';
 
 export default(
     <Routes>
-        <Route exact path="/" component={Landing}/>
-        <Route path="/signin" component={Signin}/>
-        <Route path="/register" component={Register}/>
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/signin" element={<Signin/>}/>
+        <Route path="/register" element={<Register/>}/>
     </Routes>
 );

@@ -1,15 +1,15 @@
+require('dotenv').config();
 const session = require('express-session')
 const authCtrl = require('./userAuth')
 const express = require('express')
 const cors = require('cors')
 const app = express()
-
+const massive = require('massive');
 
 app.use(cors())
 app.use(express.json())
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
-
 
 app.use(session({
     resave: false,
