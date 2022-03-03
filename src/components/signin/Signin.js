@@ -24,11 +24,10 @@ export default class Signin extends Component {
         event.preventDefault();
         const {username, password} = this.state;
         axios
-            .post('/auth/login', {username, password})
+            .post('http://localhost:4001/auth/login', {username, password})
             .then((res) => {
                 console.log(res.data);
                 this.props.loginUser(res.data)
-                this.props.history.push('/profile');
             })
             .catch((error) => alert(error, "Username or Password is incorrect"))
     }

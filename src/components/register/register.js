@@ -25,7 +25,7 @@ export default class Register extends Component {
         event.preventDefault();
         const {username, password} = this.state;
         axios
-            .post("/auth/register", {username, password})
+            .post("http://localhost:4001/auth/register", {username, password})
             .then((res) => {
                 login_User(res.data);
                 this.props.history.push("/Signin");

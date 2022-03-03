@@ -20,7 +20,7 @@ export default function Landing() {
         <div className="landing-container">
             <div className="landing-content">
                 <p className="page-title-content">Shimmer</p>
-                <hr className="line-bar" />
+                
                 <Link to="/signIn">
                     <button className="sign-in-btn">Sign in</button>
                 </Link>
