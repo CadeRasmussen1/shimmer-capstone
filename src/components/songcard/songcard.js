@@ -8,12 +8,9 @@ function SongCard(props) {
         <img alt='song cover' src={song.imageURL} class="song-cover"/>
         <p class="song-title">{song.title}</p>
         <div class="btns-container">
-            <button onclick="updateSong(${song.id}, 'minus')">-</button>
-            <p class="song-rating">{song.rating}stars</p>
-            <button onclick="updateSong(${song.id}, 'plus')">+</button>
+            <button onclick="deleteSong(${song.id})">delete</button>
+            <button onclick="location.href='${song.songURL}';">go to song</button>
         </div>
-        <button onclick="deleteSong(${song.id})">delete</button>
-        <button onclick="location.href='${song.songURL}';">go to song</button>
     </div>
     )
 }

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./Signin.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { login_User } from "../../default/default"
 
 
 export default class Signin extends Component {
@@ -27,7 +28,8 @@ export default class Signin extends Component {
             .post('http://localhost:4001/auth/login', {username, password})
             .then((res) => {
                 console.log(res.data);
-                this.props.loginUser(res.data)
+                this.props.login_User(res.data)
+                //login_user that is in question at the moment "bug"
             })
             .catch((error) => alert(error, "Username or Password is incorrect"))
     }

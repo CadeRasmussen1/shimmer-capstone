@@ -9,6 +9,7 @@ const initialState = {
 const login_user = 'login_user';
 const logout_user = 'logout_user';
 const get_user = 'get_user';
+
 export function login_User({userId, username}) {
     return {
         type: login_user,
@@ -19,7 +20,7 @@ export function login_User({userId, username}) {
     }
 }
 
-export function logout_User() {
+export function logoutUser() {
     return {
         type: logout_user,
         payload: initialState
