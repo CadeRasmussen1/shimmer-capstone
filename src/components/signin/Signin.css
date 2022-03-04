@@ -1,0 +1,63 @@
+.signin-container {
+    background-image: url("https://wallpapercave.com/wp/3wPVPxQ.jpg");
+    height: 100vh;
+    display: flex;
+    
+}
+
+.signin-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.signin-page-title-content {
+    color: #00b7ff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+
+.paragraph-content {
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 42em;
+}
+
+.line-bar {
+    width: 25%;
+    margin:30px;
+    background-color: #eee;
+    border: 0 none;
+    color: #eee;
+    height: 3px;
+}
+
+
+
+.sign-in-btn {
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 13px;
+    width: 160px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    border: 2px solid #50b2eb;
+    opacity: 0.8;
+}
+
+.register-btn-landing {
+    color: #00c8f8;
+    text-decoration: none;
+}

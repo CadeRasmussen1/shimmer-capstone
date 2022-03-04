@@ -1,46 +1,30 @@
-const songList = []
-let globalId = 0
+const allSongs = (req) => {
+    const db = req.app.get("db");
+    return db.all_songs();
+}
+
 module.exports = {
-    getSongs: (req, res) => {
-        res.status(200).send(songList)
+    getSongs: async (req, res) => {
+        const songs = await allSongs(req)
+        res.status(200).send(songs)
     },
     createSong: (req,res) => {
-        const {title, rating, imageURL, songURL} = req.body
-        let newSong = {
-            title,
-            rating: +rating,
-            imageURL,
-            id: globalId,
-            songURL
-        }
-        songList.push(newSong)
-        res.status(200).send(songList)
-        globalId++
-    },
-    updateSong: (req, res) => {
-        const { id } = req.params
-        const {type} = req.body
-
-        let index = songList.findIndex(elem => +elem.id === +id)
-
-        if (songList[index].rating === 5 && type === 'plus'){
-            res.status(400).send('cannot go above rating 5')
-        }else if(songList[index.rating === 1 && type === 'minus']){
-            res.status(400).send('cannot go below rating 1')
-        }else if(type === 'plus'){
-            songList[index].rating++
-            res.status(200).send(songList)
-        }else if(type === 'minus'){
-            songList[index].rating--
-            res.status(200).send(songList)
-        }
+        console.log('body', req.body)
+        const {songtitle, albumcover, songurl, author} = req.body
+        
+        const db = req.app.get("db");
+        db.add_song(1, songtitle, songurl, albumcover)
+        //todo author id cannot be 1 needs to be passed in from front end 
+        res.status(200).send(allSongs(req))
+        
     },
     deleteSong: (req, res) => {
+        console.log('delete', req.params)
         let {id} = req.params
-
-        let index = songList.findIndex(elem => +elem.id === +id)
-        songList.splice(index, 1)
-        res.status(200).send(songList)
+        
+        const db = req.app.get("db");
+        db.delete_song(id)
+        res.status(200).send(allSongs(req))
     }
     
 }

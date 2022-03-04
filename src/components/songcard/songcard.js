@@ -1,16 +1,41 @@
 import React from 'react'
+import axios from 'axios'
 
 
-function SongCard(props) {
-    // copy and pasted from main with div classname added
+const deleteSong = (id, songDeletedCallback, errCallback) => {
+    console.log('delete', id)
+    axios.delete(`http://localhost:4001/api/songs/${id}`)
+        .then(() => songDeletedCallback(id))
+        .catch(errCallback)
+}
+
+const songCard = (props) => {
+    console.log('props', props)
+    const songtitle = props.song_title
+    const albumcover = props.song_pic
+    const songurl = props.song_url
+    const songid = props.id
+    const songDeletedCallback = props.songDeletedCallback
+
     return (
-    <div className='song-card'>
-        <img alt='song cover' src={song.imageURL} class="song-cover"/>
-        <p class="song-title">{song.title}</p>
-        <div class="btns-container">
-            <button onclick="deleteSong(${song.id})">delete</button>
-            <button onclick="location.href='${song.songURL}';">go to song</button>
-        </div>
-    </div>
+             <div className='songcard-content'>
+                 <p 
+                 className='songcard-label-box'
+                 name='songtitle'
+                 value={songtitle}
+                 />
+                 <img 
+                 className='songcard-image-box'
+                 name='albumcover'
+                 src={albumcover}
+                 value={albumcover}
+                 />
+                 
+                 <button className='go-to-btn'  onClick={() => {window.open(songurl)}}>Go To</button>
+                <button className="delete-btn"  onClick={() => {deleteSong(songid, songDeletedCallback)} }>Delete</button>
+                
+             </div>
+
     )
 }
+ export default songCard

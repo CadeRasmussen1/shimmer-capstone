@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import "./Signin.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { login_User } from "../../default/default"
-
+import { Link, Navigate } from "react-router-dom";
 
 export default class Signin extends Component {
     constructor() {
@@ -11,7 +9,8 @@ export default class Signin extends Component {
 
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            loggedIn: false
         };
     }
 
@@ -21,29 +20,27 @@ export default class Signin extends Component {
         });
     };
 
-    login = (event) => {
+    signIn = (event) => {
         event.preventDefault();
-        const {username, password} = this.state;
         axios
-            .post('http://localhost:4001/auth/login', {username, password})
-            .then((res) => {
-                console.log(res.data);
-                this.props.login_User(res.data)
-                //login_user that is in question at the moment "bug"
-            })
-            .catch((error) => alert(error, "Username or Password is incorrect"))
+          .post('http://localhost:4001/auth/signIn', this.state)
+          .then(() => this.setState({...this.state, loggedIn: true}))
+          .catch((error) => alert(error.response.data, "Username or Password is incorrect"))
     }
 
     render() {
-        const { username, password } = this.state;
+        const { username, password, loggedIn } = this.state;
+        if(this.state.loggedIn)
+          return(<Navigate to='/mainpage' />)
+
         return (
-          <div className="signIn-container">
+          <div className="signin-container">
             
-            <div className="signIn-content">
-              <p className="signIn-page-title-content">Welcome Back!</p>
-              <form className="form-content" onSubmit={this.login}>
+            <div className="signin-content">
+              <p className="signin-page-title-content">Welcome Back!</p>
+              <form className="form-content" onSubmit={this.signIn}>
                 <input
-                  className="signIn-input-box"
+                  className="signin-input-box"
                   placeholder="Username"
                   type="text"
                   name="username"
@@ -51,7 +48,7 @@ export default class Signin extends Component {
                   onChange={(event) => this.changeHandler(event)}
                 />
                 <input
-                  className="signIn-input-box"
+                  className="signin-input-box"
                   placeholder="Password"
                   type="password"
                   name="password"
@@ -59,17 +56,12 @@ export default class Signin extends Component {
                   onChange={(event) => this.changeHandler(event)}
                 />
                 <div className="form-btns">
-                  <input className="form-blue-btn" type="submit" value="Sign In" />
+                  <input className="form-blue-btn-one" type="submit" value="Sign In" />
                   <Link to="/">
-                    <input className="form-blue-btn" type="button" value="Back" />
+                    <input className="form-blue-btn-two" type="button" value="Back" />
                   </Link>
                 </div>
-                <p className="dont-have-sentence">
-                  Don't already have an account?{" "}
-                  <Link style={{ textDecoration: "none" }} to="/register">
-                    <span className="register-btn-landing">Register Here</span>
-                  </Link>
-                </p>
+                
               </form>
             </div>
           </div>

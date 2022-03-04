@@ -1,0 +1,106 @@
+.mainpage-container {
+    background-image: url("https://wallpapercave.com/wp/3wPVPxQ.jpg");
+    height: 100vh;
+    
+    
+}
+
+.mainpage-title-content {
+    color: #00b7ff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100px;
+    margin-left: 15px;
+    margin-right: 1000px;
+    margin-top: .1px;
+}
+
+.mainpage-addsong {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    margin: 5% auto;
+    margin-right: 2200px;   
+}
+
+.songcard-image-box {
+    height: 200px;
+    width: 200px;
+}
+
+
+.songcard-content {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    margin: 5% auto;
+    
+}
+
+.songcard-input-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    margin: 5% auto;
+      
+}
+
+.songcard-input-box {
+    background-color: rgba(255,255,255,0.9);
+
+}
+
+.addsong-btn {
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 13px;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.go-to-btn {
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 13px;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.delete-btn {
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 13px;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.go-to-btn:hover{
+    border: 2px solid #50b2eb;
+    opacity: 0.8;
+}
+
+.delete-btn:hover{
+    border: 2px solid #50b2eb;
+    opacity: 0.8;
+}
+

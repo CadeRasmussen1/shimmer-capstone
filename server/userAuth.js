@@ -6,6 +6,7 @@ module.exports = {
         const {username, password} = req.body;
 
         const existingUser = await db.existing_user(username);
+        console.log(existingUser)
         if (existingUser[0]) {
             return res.status(409).send("Username is already taken")
         }
@@ -22,7 +23,7 @@ module.exports = {
         res.status(200).send(req.session.user)
     },
 
-    signIn: async (req,res) => {
+    signIn: async (req, res) => {
         const db = req.app.get("db");
         const {username, password} = req.body
 

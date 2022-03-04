@@ -21,14 +21,13 @@ app.use(session({
 
 
 app.post('/auth/register', authCtrl.register)
-app.post('/auth/login', authCtrl.signIn)
+app.post('/auth/signIn', authCtrl.signIn)
 app.delete('/auth/logout', authCtrl.logout)
 
 const ctrl = require('./controller.js')
 
 app.get('/api/songs', ctrl.getSongs)
 app.post('/api/songs', ctrl.createSong)
-app.put('/api/songs/:id', ctrl.updateSong)
 app.delete('/api/songs/:id', ctrl.deleteSong)
 
 massive({

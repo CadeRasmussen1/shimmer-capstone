@@ -1,2 +1,99 @@
+.register-container {
+    background-image: url("https://wallpapercave.com/wp/3wPVPxQ.jpg");
+    height: 100vh;
+    display: flex;
+    
+}
+
+
+.register-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.register-page-title-content {
+    color: #00b7ff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 45px;
+}
+
+.paragraph-content {
+    color: grey;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 42em;
+}
+
+.line-bar {
+    width: 25%;
+    margin:30px;
+    background-color: #eee;
+    border: 0 none;
+    color: #eee;
+    height: 3px;
+}
+
+.dont-have-sentence {
+    color: white;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-btn:hover {
+    border: 2px solid #50b2eb;
+    opacity: 0.8;
+}
+
+.register-input-box {
+    height: 15px;
+    padding: 5px;
+}
+
+.form-blue-btn-one {
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 13px;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.form-blue-btn-two {
+    background-color: #00c8f8;
+    border: 2px solid #00c8f8;
+    color: white;
+    padding: 13px;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.form-blue-btn-one:hover{
+    border: 2px solid #50b2eb;
+    opacity: 0.8;
+}
+.form-blue-btn-two:hover{
+    border: 2px solid #50b2eb;
+    opacity: 0.8;
+}
+
+
 
 

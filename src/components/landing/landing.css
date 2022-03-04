@@ -1,8 +1,8 @@
 .landing-container {
     background-image: url("https://wallpapercave.com/wp/3wPVPxQ.jpg");
-    height: 80vh;
-    width: 100vw;
-    border: 2px solid lightgrey;
+    height: 100vh;
+    display: flex;
+    
 }
 
 
@@ -13,11 +13,12 @@
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    
+    text-align: center;
+    margin: 5% auto;
 }
 
 .page-title-content {
-    color: #f68ECE;
+    color: #00b7ff;
     font-family: 'Open Sans', sans-serif;
     font-size: 45px;
 }
@@ -40,6 +41,12 @@
     height: 3px;
 }
 
+.Dont-have {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .sign-in-btn {
     background-color: #00c8f8;
     border: 2px solid #00c8f8;
@@ -48,10 +55,11 @@
     width: 160px;
     border-radius: 4px;
     cursor: pointer;
+    
 }
 
 .sign-in-btn:hover {
-    border: 2px solid #f68ECE;
+    border: 2px solid #50b2eb;
     opacity: 0.8;
 }
 

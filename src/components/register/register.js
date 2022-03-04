@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './register.css';
 import axios from 'axios';
-import { login_User }  from '../../default/default';
 import { Link } from 'react-router-dom';
 
 export default class Register extends Component {
@@ -27,11 +26,10 @@ export default class Register extends Component {
         axios
             .post("http://localhost:4001/auth/register", {username, password})
             .then((res) => {
-                login_User(res.data);
                 this.props.history.push("/Signin");
             })
             .catch((error) => {
-                alert(error, "Couldn't register a user at this time");
+                alert(error.response.data, "Couldn't register a user at this time");
             });
     };
 
@@ -60,13 +58,16 @@ export default class Register extends Component {
                   onChange={(event) => this.changeHandler(event)}
                 />
                 <div className="form-btns">
+                  
                   <input 
-                    className="form-blue-btn" 
+                    className="form-blue-btn-one" 
                     type="submit"
-                    value="Register" />
+                    value="Register" 
+                    />
+                    
                   <Link to="/">
                   <input
-                    className="form-blue-btn"
+                    className="form-blue-btn-two"
                     type="button"
                     value="Back"
                   />
